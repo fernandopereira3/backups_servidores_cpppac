@@ -1,12 +1,16 @@
 #!/bin/bash
 
+mount -t nfs 10.14.180.5:/home/backup1/sia /media/backups
+
 data=$(date +"%d-%b-%Y")
-diretorio =$(mkdir /media/backups/siabkp/sia-$data)
+mkdir /media/backups/sia-$data
 
-mount -t nfs 10.14.180.10:/media/programas/sia /media/backups
+cp -Rfv /scripts/ /media/backups
 
-cp -R -f /home/sia/banco/* /media/backups/siabkp
-cp -R -f /home/sia/update/backups /media/backups/siabkp_padrao
-echo "backup do dia" $data"\n" >> /media/backups/siabkup.txt
+cp -Rfv /home/sia/backups/ /media/backups
+cp -Rfv /home/sia/banco/* /media/backups/sia-$data
 
-umount -l /media/arquivos/programas/sia 
+cp -Rfv /home/sia/update/backups/* /media/backups/bkp_padrao/
+
+echo "backup do dia $data" >> /media/backups/siabkup.log
+umount -l 10.14.180.5:/home/backup1/sia
