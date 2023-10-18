@@ -1,7 +1,6 @@
-	Servico de backups cada SH pertence a um servidor especifico.
-|										|
-|										|
-|    TODOS OS SH DEVEM SER COLOCADOS ESPECIFICAMENTE NO SERVIDOR DESCRITO. 	|
-|    		OS IPS DAS MAQUINAS DEVEM SER ALTERADOS.			|
-|										|	
-|										|
+# Backup service
+ 
+Each SH belongs to a specific server.
+ALL SH MUST BE PLACED SPECIFICALLY ON THE SERVER DESCRIBED. THE IPS OF THE MACHINES MUST BE CHANGED.
+
+First versions of future programs converted to Python.
