@@ -5,7 +5,7 @@
 #      DATA DA ULTIMA ATUALIZACAO: 23-06-21      # 
 ##################################################
 
-mount -t nfs 10.14.180.4:/media/arquivos/logs /home/log && mount -t nfs 10.14.180.4:/media/backup /home/arquivos
+mount -t nfs IP_DO_SERVIDOR:/media/arquivos/logs /home/log && mount -t nfs IP_DO_SERVIDOR:/media/backup /home/arquivos
 echo "  " > /home/log/BACKUP_Servidor10.log
 echo -e "Backup iniciado em" $(date) "\n" >> /home/log/BACKUP_Servidor10.log
 
